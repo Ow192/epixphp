@@ -9,6 +9,8 @@ $pdo=new PDO("mysql:host=127.0.0.1; dbname=epixphp; charset=utf8","root","");
 
 $_COOKIE['style']=123;
 $style = 'main';
+$userids=123;
+// сделать юсер ид после рег
 
 if (isset($_COOKIE['style'])){
     switch ((int)$_COOKIE ['style']){
@@ -20,20 +22,37 @@ if (isset($_COOKIE['style'])){
             break;}
 }
 
-$userids=123;
-// сделать юсер ид после рег
-
 switch ($action) {
     case 'login':
+        $_POST['login'] = htmlentities($_POST['login']);
+        $_POST['password'] = htmlentities($_POST['password']);
+
+        if (($_SESSION['tokens']==$_POST["tokens"])&&(formcheck($_POST['mesagewindow'])==false))
+        {
+            try {
+            $selec4 = $pdo->prepare("SELECT id FROM users WHERE login=:login, password=:password ");
+            $selec4->execute([
+                ':login'=>$_POST['login'],
+                ':password'=>$_POST['password'],
+            ]);
+        }   catch (PDOException $e){Echo "Неверный пароль";} //кокой нужен ексепшен?
+            catch (Exception $e){Echo "Неверный логин или пароль";}
+        }
+
+        $userid=$selec4->fetchAll(PDO::FETCH_ASSOC);
+
+
         echo templates('templates/autoriz.php', [
             'style' => $style,
-            'token' => 2,
+            'userid'=>$userid,
+            'token' => newtoken(),
         ]);
         break;
 
     case 'profile':
         echo templates('templates/profile.php', [
             'style' => $style,
+            'userid'=>$userid,
         ]);
         break;
 
@@ -41,7 +60,7 @@ switch ($action) {
 
         $_POST['mesagewindow'] = htmlentities($_POST['mesagewindow']);
 
-        echo "1111";
+        echo "nachlo dafault";
 
         if (($_SESSION['tokens']==$_POST["tokens"])&&(formcheck($_POST['mesagewindow'])==false))
         {
@@ -64,7 +83,7 @@ switch ($action) {
            ':counts'=> $kols
         ]);
 
-        $mesages = $selec3->fetchAll();
+        $mesages = $selec3->fetchAll(PDO::FETCH_ASSOC);
         var_dump($mesages);
 
 //        for ($i=0; $i<$kols;$i++){
@@ -76,12 +95,12 @@ switch ($action) {
 //            echo "<br>";
 //            echo "<br>";
 //        }
-//        echo "</br>";
 
         echo templates('templates/home.php', [
              'token' => newtoken(),
              'style' => $style,
-             'mesage'=> $mesages,
+             'mesage'=>$mesages,
+             'userid'=>$userid,
         ]);
         break;
 }

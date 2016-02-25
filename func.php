@@ -1,36 +1,41 @@
 <?php
-/*
- * namefile- templates/autoriz.php
- * peredArgym
- * return - html and date
+/**
+ * @param $namefile
+ * @param array $peredArgym
+ * @return string
  */
 function templates($namefile, array $peredArgym=[]){
 ob_start();
     extract($peredArgym);
     require($namefile);
-    $ret=ob_get_contents();
+    $retur=ob_get_contents();
 ob_end_clean();
 
-return $ret;
+return $retur;
 }
-/*
- * str - string or array["..."]
- * return - pusto? (net simvolov... ) true/false ,
+
+/**
+ * @param $stroka1
+ * @return bool
  */
-function formcheck ($str1){
-        if (!empty($str1)){
-        $str2=htmlentities($str1);
-        $str2=str_replace("\n","",$str2);
-        $str2=trim($str2," ");
-        $str2=str_replace("\n","",$str2);
-        return $str2=="" ? true : false;
+function formcheck ($stroka1){
+        if (!empty($stroka1)){
+        $stroka2=htmlentities($stroka1);
+        $stroka2=str_replace("\n","",$stroka2);
+        $stroka2=str_replace("\r","",$stroka2);
+        $stroka2=trim($stroka2," ");
+        $stroka2=str_replace("\n","",$stroka2);
+        $stroka2=str_replace("\r","",$stroka2);
+        return $stroka2=="" ? true : false;
         }
-    else { return true;}
+else { return true;}
 }
-/*
- * str - string or array["..."]
- * return - pusto? (net simvolov... ) true/false ,
+
+/**
+ * @return string
  */
 function newtoken () {
-    $_SESSION['tokens']=uniqid();
+    $tokens=uniqid();
+    $_SESSION['token']=$tokens;
+    return $tokens;
 }

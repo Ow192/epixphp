@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>profile</h1>
-<form action="?action=profile" method="post">
+<form action="<?= $homeurl?>" method="post">
     <input type="radio" name="style" value="0" <?= $style == 'main' ? 'checked' : '' ?>>default<Br>
     <input type="radio" name="style" value="1" <?= $style == 'black' ? 'checked' : '' ?>>black<Br>
     <input type="radio" name="style" value="2" <?= $style == 'red' ? 'checked' : '' ?>>red<Br>

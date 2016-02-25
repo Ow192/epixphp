@@ -8,18 +8,17 @@
 <body>
 <h1>Home</h1>
 <?php
-foreach ($mesages as $key=>$value){
-            echo htmlentities($mesages[$key]["mes"]);
+foreach ($mesage as $key=>$value){
+            echo htmlentities($mesage[$key]["mes"]);
             echo "<br>";
-            echo htmlentities($mesages[$key]["login"])." ".htmlentities($mesages[$key]["date"]);
+            echo htmlentities($mesage[$key]["userid"])." ".htmlentities($mesage[$key]["date"]);
             echo "<br>";
-            echo "<br>";
-}
+            echo "<br>";}
 ?>
-<form action ="?action=home" method="post">
+<form action ="<?= $homeurl?>" method="post">
     <textarea name="mesagewindow" rows="5"></textarea>
     <input type="submit" name="action" value="save">
-    <input type="hidden" name="tokens" value=<?=$token?>>
+    <input type="hidden" name="token" value="<?=$token?>">
 </form>
 </body>
 </html>

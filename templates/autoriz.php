@@ -7,11 +7,13 @@
 </head>
 <body>
 <h1>autor</h1>
-<form action="<?= $site_url ?>" method="post">
-    <input type="text" name="login" value="<?= $login ?>" title="login">
+<br>
+<h1><?php echo $error;?></h1>
+<form action="<?= $homeurl?>" method="post">
+    <input type="text" name="login" value="text" title="login">
     <input type="password" name="password" title="password">
     <input type="submit" name="action" value="login">
-    <input type="hidden" name="token" value="<?= $token ?>">
+    <input type="hidden" name="token" value="<?= $token; ?>">
 </form>
 </body>
 </html>

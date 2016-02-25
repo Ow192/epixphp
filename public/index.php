@@ -2,105 +2,119 @@
 session_start();
 
 require '../func.php';
+require '../vendor/autoloader.php';
 
-$action = empty($_GET['action']) ? 'home' : $_GET['action'];
-
-$pdo=new PDO("mysql:host=127.0.0.1; dbname=epixphp; charset=utf8","root","");
-
-$_COOKIE['style']=123;
-$style = 'main';
+define("HomeUrl", "http://127.0.0.1/blokepix/block/public/index.php");
+// constanta url home
 $userids=123;
-// сделать юсер ид после рег
 
-if (isset($_COOKIE['style'])){
+
+echo "<br>";
+echo "<br>";
+
+if (!isset($_POST['mesagewindow'])){$_POST['mesagewindow']=null;}
+if (!isset($_POST['token'])){$_POST['token']=null;}
+if (!isset($_SESSION['token'])){$_SESSION['token']=null;}
+
+try{
+$pdo=new PDO("mysql:host=127.0.0.1; dbname=epixphp; charset=utf8","root","");
+} catch (Exception $e){
+    file_put_contents("log.txt", $e.date("HH,DD"),FILE_APPEND | LOCK_EX);
+    echo "<h1>Ошибка 503: Сервис временно не доступен.</h1>";
+    exit();
+}
+
     switch ((int)$_COOKIE ['style']){
         case 1:
             $style= 'black';
             break;
         case 2:
             $style='red';
-            break;}
+            break;
+        default:
+            $style="default";
+            setcookie("style",$style);
+            break;
 }
 
-switch ($action) {
-    case 'login':
-        $_POST['login'] = htmlentities($_POST['login']);
-        $_POST['password'] = htmlentities($_POST['password']);
+//    proverka 1 ect' li, 2 ne isseklo vreme? v if
+//      izvlekaem idpolzov derehod v home
 
-        if (($_SESSION['tokens']==$_POST["tokens"])&&(formcheck($_POST['mesagewindow'])==false))
+//$_COOKIE['uniq'] - уникальный id пароль для каждого пользователя.
+//if (!isset($_COOKIE['uniq'])){
+$action= empty($_GET["action"]) ? "login" : $_GET["action"];
+//if (isset($action)){
+//
+//    $action = "login";
+//} else{
+//    $action = "login";
+//}
+
+switch ($action) {
+
+    case 'login':
+        if (!isset($_POST['login'])){$_POST['login']=null;}
+        if (!isset($_POST['password'])){$_POST['password']=null;}
+        $erorlogin=" ";
+        if ((($_SESSION['token'])==($_POST['token']))&&(formcheck($_POST['login'])==false)&&(formcheck($_POST['password'])==false))
         {
-            try {
-            $selec4 = $pdo->prepare("SELECT id FROM users WHERE login=:login, password=:password ");
+            echo $erorlogin;
+            $_POST['login'] = htmlentities($_POST['login']);
+            $_POST['password'] = htmlentities($_POST['password']);
+            $selec4 = $pdo->prepare("SELECT id FROM users WHERE login=:login AND password=:password");
             $selec4->execute([
                 ':login'=>$_POST['login'],
                 ':password'=>$_POST['password'],
             ]);
-        }   catch (PDOException $e){Echo "Неверный пароль";} //кокой нужен ексепшен?
-            catch (Exception $e){Echo "Неверный логин или пароль";}
+            $userid=$selec4->fetchall(PDO::FETCH_ASSOC);
+
+            if (!isset($userid["0"]["id"])){
+                $erorlogin="Неправильный логин или пароль.";
+            } else{
+                $_SESSION["id"]=$userid["0"]["id"];
+                header('Location:' . sprintf('%s?action=home', HomeUrl));
+            }
         }
-
-        $userid=$selec4->fetchAll(PDO::FETCH_ASSOC);
-
 
         echo templates('templates/autoriz.php', [
             'style' => $style,
-            'userid'=>$userid,
             'token' => newtoken(),
+            'homeurl'=>HomeUrl,
+            'error'=> $erorlogin,
         ]);
         break;
 
     case 'profile':
-        echo templates('templates/profile.php', [
+s        echo templates('templates/profile.php', [
             'style' => $style,
             'userid'=>$userid,
+            'homeurl'=>HomeUrl,
         ]);
         break;
 
     default:
-
-        $_POST['mesagewindow'] = htmlentities($_POST['mesagewindow']);
-
-        echo "nachlo dafault";
-
-        if (($_SESSION['tokens']==$_POST["tokens"])&&(formcheck($_POST['mesagewindow'])==false))
+        if (($_SESSION['token']==$_POST["token"])&&(formcheck($_POST['mesagewindow'])==false))
         {
+            $_POST['mesagewindow'] = htmlentities($_POST['mesagewindow']);
             $selec2 = $pdo->prepare("INSERT into mesage set date=now(), mes=:mess,userid=:uses");
             $selec2->execute([
                 ':mess'=>$_POST["mesagewindow"],
-                ':uses'=>$userids
+                ':uses'=>$_SESSION["id"],
             ]);
         }
-        elseif (!empty($_SESSION['tokens'])){echo "What are you doing?";}
 
-//     newtoken();
-        $start=0;
-        $kols=4;
-        $selec3=$pdo->query("SELECT mesage.mes, users.login, mesage.date FROM mesage LEFT JOIN users ON mesage.userid=users.id order by mesage.date DESC");
-
-        $selec1=$pdo->prepare("SELECT mesage.mes, users.login, mesage.date FROM mesage LEFT JOIN users ON mesage.userid=users.id order by mesage.date DESC Limit :starts,:counts ");
-        $selec1->execute([
-           ':starts'=> $start,
-           ':counts'=> $kols
-        ]);
+        $starts= (int)0;
+        $kols=(int)7;
+        $ses=(int) $_SESSION["id"];
+        $selec3=$pdo->query("SELECT mesage.mes, mesage.userid, mesage.date FROM mesage where mesage.userid=$ses order by mesage.date DESC Limit $starts,$kols");
 
         $mesages = $selec3->fetchAll(PDO::FETCH_ASSOC);
-        var_dump($mesages);
-
-//        for ($i=0; $i<$kols;$i++){
-//            $row = $selec1->fetch(PDO::FETCH_ASSOC);
-//            echo htmlentities($row["mes"]);
-//            var_dump($row);
-//            echo "<br>";
-//            echo htmlentities($row["login"])." ".htmlentities($row["date"]);
-//            echo "<br>";
-//            echo "<br>";
-//        }
 
         echo templates('templates/home.php', [
              'token' => newtoken(),
              'style' => $style,
              'mesage'=>$mesages,
-             'userid'=>$userid,
+            'homeurl'=>HomeUrl,
         ]);
         break;
 }

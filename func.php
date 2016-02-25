@@ -39,3 +39,22 @@ function newtoken () {
     $_SESSION['token']=$tokens;
     return $tokens;
 }
+
+/**
+ * @param $poststroka
+ */
+function exits($poststroka){   // $_POST["quit"]
+    if (($poststroka==true)&&($_SESSION['token']==$_POST['token'])&&(formcheck($poststroka)==false)){
+        $_SESSION["id"]=null;
+        header('Location:' . sprintf('%s?action=login', HomeUrl));
+    }
+}
+
+
+function tokencheck (){
+    if (($_SESSION['token'])==($_POST['token'])){
+        return true;
+    } else {
+        return false;
+    }
+}

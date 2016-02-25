@@ -3,16 +3,17 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>epic blog</title>
-    <link rel="stylesheet" href="assets/<?= $style ?>.css">
+    <link rel="stylesheet" href="css/<?= $style ?>.css">
 </head>
 <body>
 <h1>autor</h1>
 <br>
 <h1><?php echo $error;?></h1>
-<form action="<?= $homeurl?>" method="post">
-    <input type="text" name="login" value="text" title="login">
+<form action="<?= $homeurl?>?action=login" method="post">
+    <input type="text" name="login" value="login" title="login">
     <input type="password" name="password" title="password">
-    <input type="submit" name="action" value="login">
+    <input type="submit" name="action" value="Login">
+    <input type="submit" name="action" value="Registration">
     <input type="hidden" name="token" value="<?= $token; ?>">
 </form>
 </body>

@@ -16,6 +16,29 @@ if (!isset($_SESSION['token'])){$_SESSION['token']="";}
 if (!empty($a)){echo "1";}
 echo"</br>";
 echo $f=ceil(8/5);
+
+echo"</br>";echo"</br>";
+for ($k=0; $k<2;$k++){
+    echo"</br>";
+    echo $k;
+}
+echo"</br>";
+echo"</br>";
+$asd="qwer";
+echo $asd;
+echo"</br>";
+$e=password_hash($asd,PASSWORD_DEFAULT);
+
+
+echo $e;
+$f="qwer";
+echo"</br>";
+echo password_hash($f,PASSWORD_DEFAULT);
+echo"</br>";
+var_dump(password_verify($f,$e));
+
+echo"1";
+
 //$pdo=new PDO("mysql:host=127.0.0.1; dbname=epixphp; charset=utf8","root","");
 //$log1="qw12";
 //$pas1=md5($log1);

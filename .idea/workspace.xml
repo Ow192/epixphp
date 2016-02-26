@@ -26,23 +26,23 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="4" selection-start="360" selection-end="360" vertical-scroll-proportion="0.3306321" vertical-offset="0" max-vertical-offset="4539">
+            <state line="3" column="31" selection-start="55" selection-end="55" vertical-scroll-proportion="0.08265802" vertical-offset="0" max-vertical-offset="4556">
               <folding>
-                <marker date="1456488025891" expanded="true" signature="1858:2023" placeholder="..." />
-                <marker date="1456488025891" expanded="true" signature="1888:1931" placeholder="SELECT login..users..." />
-                <marker date="1456488025891" expanded="true" signature="2208:2253" placeholder="INSERT INTO ..." />
-                <marker date="1456488025891" expanded="true" signature="2762:2811" placeholder="SELECT id, p..users..." />
-                <marker date="1456488025891" expanded="true" signature="4065:4296" placeholder="SELECT mesag..mesage..." />
-                <marker date="1456488025891" expanded="true" signature="6064:6096" placeholder="DELETE FROM ..." />
-                <marker date="1456488025891" expanded="true" signature="6412:6469" placeholder="INSERT into ..." />
-                <marker date="1456488025891" expanded="true" signature="7282:7318" placeholder="SELECT tag F..tags..." />
-                <marker date="1456488025891" expanded="true" signature="7582:7612" placeholder="INSERT INTO ..." />
-                <marker date="1456488025891" expanded="true" signature="7810:7867" placeholder="SELECT id FR..mesage..." />
-                <marker date="1456488025891" expanded="true" signature="8199:8234" placeholder="SELECT id FR..tags..." />
-                <marker date="1456488025891" expanded="true" signature="8465:8525" placeholder="INSERT INTO ..." />
-                <marker date="1456488025891" expanded="true" signature="8962:9006" placeholder="UPDATE mesag..." />
-                <marker date="1456488025891" expanded="true" signature="9315:9368" placeholder="SELECT mesag..mesage..." />
-                <marker date="1456488025891" expanded="true" signature="10020:10159" placeholder="SELECT mesag..mesage..." />
+                <marker date="1456516552768" expanded="true" signature="1890:2055" placeholder="..." />
+                <marker date="1456516552768" expanded="true" signature="1920:1963" placeholder="SELECT login..users..." />
+                <marker date="1456516552768" expanded="true" signature="2240:2285" placeholder="INSERT INTO ..." />
+                <marker date="1456516552768" expanded="true" signature="2794:2843" placeholder="SELECT id, p..users..." />
+                <marker date="1456516552768" expanded="true" signature="4097:4328" placeholder="SELECT mesag..mesage..." />
+                <marker date="1456516552768" expanded="true" signature="6096:6128" placeholder="DELETE FROM ..." />
+                <marker date="1456516552768" expanded="true" signature="6444:6501" placeholder="INSERT into ..." />
+                <marker date="1456516552768" expanded="true" signature="7314:7350" placeholder="SELECT tag F..tags..." />
+                <marker date="1456516552768" expanded="true" signature="7614:7644" placeholder="INSERT INTO ..." />
+                <marker date="1456516552768" expanded="true" signature="7842:7899" placeholder="SELECT id FR..mesage..." />
+                <marker date="1456516552768" expanded="true" signature="8231:8266" placeholder="SELECT id FR..tags..." />
+                <marker date="1456516552768" expanded="true" signature="8497:8557" placeholder="INSERT INTO ..." />
+                <marker date="1456516552768" expanded="true" signature="8994:9038" placeholder="UPDATE mesag..." />
+                <marker date="1456516552768" expanded="true" signature="9347:9400" placeholder="SELECT mesag..mesage..." />
+                <marker date="1456516552768" expanded="true" signature="10052:10191" placeholder="SELECT mesag..mesage..." />
               </folding>
             </state>
           </provider>
@@ -51,16 +51,7 @@
       <file leaf-file-name="test.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="12" selection-start="610" selection-end="610" vertical-scroll-proportion="-17.038462" vertical-offset="135" max-vertical-offset="1139">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="28" selection-start="212" selection-end="212" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="221">
+            <state line="3" column="0" selection-start="24" selection-end="95" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="561">
               <folding />
             </state>
           </provider>
@@ -215,20 +206,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="block" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="block" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -276,7 +253,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="786" extended-state="7" />
+    <frame x="-8" y="-8" width="1296" height="786" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -336,21 +313,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="14" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2414">
           <folding>
-            <marker date="1456488025891" expanded="true" signature="1858:2023" placeholder="..." />
-            <marker date="1456488025891" expanded="true" signature="1888:1931" placeholder="SELECT login..users..." />
-            <marker date="1456488025891" expanded="true" signature="2208:2253" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="2762:2811" placeholder="SELECT id, p..users..." />
-            <marker date="1456488025891" expanded="true" signature="4065:4296" placeholder="SELECT mesag..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="6064:6096" placeholder="DELETE FROM ..." />
-            <marker date="1456488025891" expanded="true" signature="6412:6469" placeholder="INSERT into ..." />
-            <marker date="1456488025891" expanded="true" signature="7282:7318" placeholder="SELECT tag F..tags..." />
-            <marker date="1456488025891" expanded="true" signature="7582:7612" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="7810:7867" placeholder="SELECT id FR..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="8199:8234" placeholder="SELECT id FR..tags..." />
-            <marker date="1456488025891" expanded="true" signature="8465:8525" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="8962:9006" placeholder="UPDATE mesag..." />
-            <marker date="1456488025891" expanded="true" signature="9315:9368" placeholder="SELECT mesag..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="10020:10159" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="1890:2055" placeholder="..." />
+            <marker date="1456516552768" expanded="true" signature="1920:1963" placeholder="SELECT login..users..." />
+            <marker date="1456516552768" expanded="true" signature="2240:2285" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="2794:2843" placeholder="SELECT id, p..users..." />
+            <marker date="1456516552768" expanded="true" signature="4097:4328" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="6096:6128" placeholder="DELETE FROM ..." />
+            <marker date="1456516552768" expanded="true" signature="6444:6501" placeholder="INSERT into ..." />
+            <marker date="1456516552768" expanded="true" signature="7314:7350" placeholder="SELECT tag F..tags..." />
+            <marker date="1456516552768" expanded="true" signature="7614:7644" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="7842:7899" placeholder="SELECT id FR..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="8231:8266" placeholder="SELECT id FR..tags..." />
+            <marker date="1456516552768" expanded="true" signature="8497:8557" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="8994:9038" placeholder="UPDATE mesag..." />
+            <marker date="1456516552768" expanded="true" signature="9347:9400" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="10052:10191" placeholder="SELECT mesag..mesage..." />
           </folding>
         </state>
       </provider>
@@ -394,21 +371,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="0" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1904">
           <folding>
-            <marker date="1456488025891" expanded="true" signature="1858:2023" placeholder="..." />
-            <marker date="1456488025891" expanded="true" signature="1888:1931" placeholder="SELECT login..users..." />
-            <marker date="1456488025891" expanded="true" signature="2208:2253" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="2762:2811" placeholder="SELECT id, p..users..." />
-            <marker date="1456488025891" expanded="true" signature="4065:4296" placeholder="SELECT mesag..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="6064:6096" placeholder="DELETE FROM ..." />
-            <marker date="1456488025891" expanded="true" signature="6412:6469" placeholder="INSERT into ..." />
-            <marker date="1456488025891" expanded="true" signature="7282:7318" placeholder="SELECT tag F..tags..." />
-            <marker date="1456488025891" expanded="true" signature="7582:7612" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="7810:7867" placeholder="SELECT id FR..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="8199:8234" placeholder="SELECT id FR..tags..." />
-            <marker date="1456488025891" expanded="true" signature="8465:8525" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="8962:9006" placeholder="UPDATE mesag..." />
-            <marker date="1456488025891" expanded="true" signature="9315:9368" placeholder="SELECT mesag..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="10020:10159" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="1890:2055" placeholder="..." />
+            <marker date="1456516552768" expanded="true" signature="1920:1963" placeholder="SELECT login..users..." />
+            <marker date="1456516552768" expanded="true" signature="2240:2285" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="2794:2843" placeholder="SELECT id, p..users..." />
+            <marker date="1456516552768" expanded="true" signature="4097:4328" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="6096:6128" placeholder="DELETE FROM ..." />
+            <marker date="1456516552768" expanded="true" signature="6444:6501" placeholder="INSERT into ..." />
+            <marker date="1456516552768" expanded="true" signature="7314:7350" placeholder="SELECT tag F..tags..." />
+            <marker date="1456516552768" expanded="true" signature="7614:7644" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="7842:7899" placeholder="SELECT id FR..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="8231:8266" placeholder="SELECT id FR..tags..." />
+            <marker date="1456516552768" expanded="true" signature="8497:8557" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="8994:9038" placeholder="UPDATE mesag..." />
+            <marker date="1456516552768" expanded="true" signature="9347:9400" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="10052:10191" placeholder="SELECT mesag..mesage..." />
           </folding>
         </state>
       </provider>
@@ -445,21 +422,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="28" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1581">
           <folding>
-            <marker date="1456488025891" expanded="true" signature="1858:2023" placeholder="..." />
-            <marker date="1456488025891" expanded="true" signature="1888:1931" placeholder="SELECT login..users..." />
-            <marker date="1456488025891" expanded="true" signature="2208:2253" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="2762:2811" placeholder="SELECT id, p..users..." />
-            <marker date="1456488025891" expanded="true" signature="4065:4296" placeholder="SELECT mesag..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="6064:6096" placeholder="DELETE FROM ..." />
-            <marker date="1456488025891" expanded="true" signature="6412:6469" placeholder="INSERT into ..." />
-            <marker date="1456488025891" expanded="true" signature="7282:7318" placeholder="SELECT tag F..tags..." />
-            <marker date="1456488025891" expanded="true" signature="7582:7612" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="7810:7867" placeholder="SELECT id FR..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="8199:8234" placeholder="SELECT id FR..tags..." />
-            <marker date="1456488025891" expanded="true" signature="8465:8525" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="8962:9006" placeholder="UPDATE mesag..." />
-            <marker date="1456488025891" expanded="true" signature="9315:9368" placeholder="SELECT mesag..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="10020:10159" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="1890:2055" placeholder="..." />
+            <marker date="1456516552768" expanded="true" signature="1920:1963" placeholder="SELECT login..users..." />
+            <marker date="1456516552768" expanded="true" signature="2240:2285" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="2794:2843" placeholder="SELECT id, p..users..." />
+            <marker date="1456516552768" expanded="true" signature="4097:4328" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="6096:6128" placeholder="DELETE FROM ..." />
+            <marker date="1456516552768" expanded="true" signature="6444:6501" placeholder="INSERT into ..." />
+            <marker date="1456516552768" expanded="true" signature="7314:7350" placeholder="SELECT tag F..tags..." />
+            <marker date="1456516552768" expanded="true" signature="7614:7644" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="7842:7899" placeholder="SELECT id FR..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="8231:8266" placeholder="SELECT id FR..tags..." />
+            <marker date="1456516552768" expanded="true" signature="8497:8557" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="8994:9038" placeholder="UPDATE mesag..." />
+            <marker date="1456516552768" expanded="true" signature="9347:9400" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="10052:10191" placeholder="SELECT mesag..mesage..." />
           </folding>
         </state>
       </provider>
@@ -496,21 +473,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="50" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1224">
           <folding>
-            <marker date="1456488025891" expanded="true" signature="1858:2023" placeholder="..." />
-            <marker date="1456488025891" expanded="true" signature="1888:1931" placeholder="SELECT login..users..." />
-            <marker date="1456488025891" expanded="true" signature="2208:2253" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="2762:2811" placeholder="SELECT id, p..users..." />
-            <marker date="1456488025891" expanded="true" signature="4065:4296" placeholder="SELECT mesag..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="6064:6096" placeholder="DELETE FROM ..." />
-            <marker date="1456488025891" expanded="true" signature="6412:6469" placeholder="INSERT into ..." />
-            <marker date="1456488025891" expanded="true" signature="7282:7318" placeholder="SELECT tag F..tags..." />
-            <marker date="1456488025891" expanded="true" signature="7582:7612" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="7810:7867" placeholder="SELECT id FR..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="8199:8234" placeholder="SELECT id FR..tags..." />
-            <marker date="1456488025891" expanded="true" signature="8465:8525" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="8962:9006" placeholder="UPDATE mesag..." />
-            <marker date="1456488025891" expanded="true" signature="9315:9368" placeholder="SELECT mesag..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="10020:10159" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="1890:2055" placeholder="..." />
+            <marker date="1456516552768" expanded="true" signature="1920:1963" placeholder="SELECT login..users..." />
+            <marker date="1456516552768" expanded="true" signature="2240:2285" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="2794:2843" placeholder="SELECT id, p..users..." />
+            <marker date="1456516552768" expanded="true" signature="4097:4328" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="6096:6128" placeholder="DELETE FROM ..." />
+            <marker date="1456516552768" expanded="true" signature="6444:6501" placeholder="INSERT into ..." />
+            <marker date="1456516552768" expanded="true" signature="7314:7350" placeholder="SELECT tag F..tags..." />
+            <marker date="1456516552768" expanded="true" signature="7614:7644" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="7842:7899" placeholder="SELECT id FR..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="8231:8266" placeholder="SELECT id FR..tags..." />
+            <marker date="1456516552768" expanded="true" signature="8497:8557" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="8994:9038" placeholder="UPDATE mesag..." />
+            <marker date="1456516552768" expanded="true" signature="9347:9400" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="10052:10191" placeholder="SELECT mesag..mesage..." />
           </folding>
         </state>
       </provider>
@@ -550,21 +527,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="408">
           <folding>
-            <marker date="1456488025891" expanded="true" signature="1858:2023" placeholder="..." />
-            <marker date="1456488025891" expanded="true" signature="1888:1931" placeholder="SELECT login..users..." />
-            <marker date="1456488025891" expanded="true" signature="2208:2253" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="2762:2811" placeholder="SELECT id, p..users..." />
-            <marker date="1456488025891" expanded="true" signature="4065:4296" placeholder="SELECT mesag..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="6064:6096" placeholder="DELETE FROM ..." />
-            <marker date="1456488025891" expanded="true" signature="6412:6469" placeholder="INSERT into ..." />
-            <marker date="1456488025891" expanded="true" signature="7282:7318" placeholder="SELECT tag F..tags..." />
-            <marker date="1456488025891" expanded="true" signature="7582:7612" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="7810:7867" placeholder="SELECT id FR..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="8199:8234" placeholder="SELECT id FR..tags..." />
-            <marker date="1456488025891" expanded="true" signature="8465:8525" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="8962:9006" placeholder="UPDATE mesag..." />
-            <marker date="1456488025891" expanded="true" signature="9315:9368" placeholder="SELECT mesag..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="10020:10159" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="1890:2055" placeholder="..." />
+            <marker date="1456516552768" expanded="true" signature="1920:1963" placeholder="SELECT login..users..." />
+            <marker date="1456516552768" expanded="true" signature="2240:2285" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="2794:2843" placeholder="SELECT id, p..users..." />
+            <marker date="1456516552768" expanded="true" signature="4097:4328" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="6096:6128" placeholder="DELETE FROM ..." />
+            <marker date="1456516552768" expanded="true" signature="6444:6501" placeholder="INSERT into ..." />
+            <marker date="1456516552768" expanded="true" signature="7314:7350" placeholder="SELECT tag F..tags..." />
+            <marker date="1456516552768" expanded="true" signature="7614:7644" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="7842:7899" placeholder="SELECT id FR..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="8231:8266" placeholder="SELECT id FR..tags..." />
+            <marker date="1456516552768" expanded="true" signature="8497:8557" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="8994:9038" placeholder="UPDATE mesag..." />
+            <marker date="1456516552768" expanded="true" signature="9347:9400" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="10052:10191" placeholder="SELECT mesag..mesage..." />
           </folding>
         </state>
       </provider>
@@ -594,21 +571,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <folding>
-            <marker date="1456488025891" expanded="true" signature="1858:2023" placeholder="..." />
-            <marker date="1456488025891" expanded="true" signature="1888:1931" placeholder="SELECT login..users..." />
-            <marker date="1456488025891" expanded="true" signature="2208:2253" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="2762:2811" placeholder="SELECT id, p..users..." />
-            <marker date="1456488025891" expanded="true" signature="4065:4296" placeholder="SELECT mesag..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="6064:6096" placeholder="DELETE FROM ..." />
-            <marker date="1456488025891" expanded="true" signature="6412:6469" placeholder="INSERT into ..." />
-            <marker date="1456488025891" expanded="true" signature="7282:7318" placeholder="SELECT tag F..tags..." />
-            <marker date="1456488025891" expanded="true" signature="7582:7612" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="7810:7867" placeholder="SELECT id FR..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="8199:8234" placeholder="SELECT id FR..tags..." />
-            <marker date="1456488025891" expanded="true" signature="8465:8525" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="8962:9006" placeholder="UPDATE mesag..." />
-            <marker date="1456488025891" expanded="true" signature="9315:9368" placeholder="SELECT mesag..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="10020:10159" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="1890:2055" placeholder="..." />
+            <marker date="1456516552768" expanded="true" signature="1920:1963" placeholder="SELECT login..users..." />
+            <marker date="1456516552768" expanded="true" signature="2240:2285" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="2794:2843" placeholder="SELECT id, p..users..." />
+            <marker date="1456516552768" expanded="true" signature="4097:4328" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="6096:6128" placeholder="DELETE FROM ..." />
+            <marker date="1456516552768" expanded="true" signature="6444:6501" placeholder="INSERT into ..." />
+            <marker date="1456516552768" expanded="true" signature="7314:7350" placeholder="SELECT tag F..tags..." />
+            <marker date="1456516552768" expanded="true" signature="7614:7644" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="7842:7899" placeholder="SELECT id FR..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="8231:8266" placeholder="SELECT id FR..tags..." />
+            <marker date="1456516552768" expanded="true" signature="8497:8557" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="8994:9038" placeholder="UPDATE mesag..." />
+            <marker date="1456516552768" expanded="true" signature="9347:9400" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="10052:10191" placeholder="SELECT mesag..mesage..." />
           </folding>
         </state>
       </provider>
@@ -696,20 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/searchtag.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="12" selection-start="944" selection-end="944" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="8" selection-start="2657" selection-end="2657" vertical-scroll-proportion="-15.730769" vertical-offset="713" max-vertical-offset="1343">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/func.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="7" selection-start="413" selection-end="538" vertical-scroll-proportion="-5.269231" vertical-offset="254" max-vertical-offset="1105">
@@ -724,39 +687,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
+    <entry file="file://$PROJECT_DIR$/templates/searchtag.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="28" selection-start="212" selection-end="212" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="221">
+        <state line="23" column="12" selection-start="944" selection-end="944" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="8" selection-start="2657" selection-end="2657" vertical-scroll-proportion="-15.730769" vertical-offset="713" max-vertical-offset="1343">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="12" selection-start="610" selection-end="610" vertical-scroll-proportion="-17.038462" vertical-offset="135" max-vertical-offset="1139">
+        <state line="3" column="0" selection-start="24" selection-end="95" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="561">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="360" selection-end="360" vertical-scroll-proportion="0.3306321" vertical-offset="0" max-vertical-offset="4539">
+        <state line="3" column="31" selection-start="55" selection-end="55" vertical-scroll-proportion="0.08265802" vertical-offset="0" max-vertical-offset="4556">
           <folding>
-            <marker date="1456488025891" expanded="true" signature="1858:2023" placeholder="..." />
-            <marker date="1456488025891" expanded="true" signature="1888:1931" placeholder="SELECT login..users..." />
-            <marker date="1456488025891" expanded="true" signature="2208:2253" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="2762:2811" placeholder="SELECT id, p..users..." />
-            <marker date="1456488025891" expanded="true" signature="4065:4296" placeholder="SELECT mesag..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="6064:6096" placeholder="DELETE FROM ..." />
-            <marker date="1456488025891" expanded="true" signature="6412:6469" placeholder="INSERT into ..." />
-            <marker date="1456488025891" expanded="true" signature="7282:7318" placeholder="SELECT tag F..tags..." />
-            <marker date="1456488025891" expanded="true" signature="7582:7612" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="7810:7867" placeholder="SELECT id FR..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="8199:8234" placeholder="SELECT id FR..tags..." />
-            <marker date="1456488025891" expanded="true" signature="8465:8525" placeholder="INSERT INTO ..." />
-            <marker date="1456488025891" expanded="true" signature="8962:9006" placeholder="UPDATE mesag..." />
-            <marker date="1456488025891" expanded="true" signature="9315:9368" placeholder="SELECT mesag..mesage..." />
-            <marker date="1456488025891" expanded="true" signature="10020:10159" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="1890:2055" placeholder="..." />
+            <marker date="1456516552768" expanded="true" signature="1920:1963" placeholder="SELECT login..users..." />
+            <marker date="1456516552768" expanded="true" signature="2240:2285" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="2794:2843" placeholder="SELECT id, p..users..." />
+            <marker date="1456516552768" expanded="true" signature="4097:4328" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="6096:6128" placeholder="DELETE FROM ..." />
+            <marker date="1456516552768" expanded="true" signature="6444:6501" placeholder="INSERT into ..." />
+            <marker date="1456516552768" expanded="true" signature="7314:7350" placeholder="SELECT tag F..tags..." />
+            <marker date="1456516552768" expanded="true" signature="7614:7644" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="7842:7899" placeholder="SELECT id FR..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="8231:8266" placeholder="SELECT id FR..tags..." />
+            <marker date="1456516552768" expanded="true" signature="8497:8557" placeholder="INSERT INTO ..." />
+            <marker date="1456516552768" expanded="true" signature="8994:9038" placeholder="UPDATE mesag..." />
+            <marker date="1456516552768" expanded="true" signature="9347:9400" placeholder="SELECT mesag..mesage..." />
+            <marker date="1456516552768" expanded="true" signature="10052:10191" placeholder="SELECT mesag..mesage..." />
           </folding>
         </state>
       </provider>

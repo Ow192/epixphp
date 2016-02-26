@@ -24,5 +24,9 @@ var_dump(password_verify($f,$e));
 echo"</br>";
 
 
+$ddd= date_create('1099-24-5');
+echo date('j.n.Y H:i:s');
+echo date_format($ddd, 'Y-m-d H:i:s');
+
 
 ?>

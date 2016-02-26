@@ -11,13 +11,7 @@ if (!isset($_SESSION['token'])){$_SESSION['token']="";}
 if (!isset($_POST['quit'])){$_POST['quit']=false;}
 if (!isset($_POST['style'])){$_POST['style']="";}
 
-try{
-$pdo=new PDO("mysql:host=127.0.0.1; dbname=epixphp; charset=utf8","root","");
-} catch (Exception $e){
-    file_put_contents("log.txt", $e.date("HH,DD"),FILE_APPEND | LOCK_EX);
-    echo "<h1>Ошибка 503: Сервис временно не доступен.</h1>";
-    exit();
-}
+$pdo=connect(['host'=>BD_MAIN_HOST,'dbname'=> BD_MAIN_NAME,'user'=>BD_MAIN_LOGIN,'password'=>BD_MAIN_PASSWORD]);
 
 if (!isset($_COOKIE ['style'])){ $cookieinit="0"; setcookie("style", $cookieinit);} else {$cookieinit=(int)$_COOKIE['style'];}
 if (!empty($_POST['style'])){$cookieinit=(int)$_POST['style'];  setcookie("style",$cookieinit);}
@@ -198,7 +192,6 @@ switch ($action) {
                 ]);
                 $idmessage=$selec11->fetchAll(PDO::FETCH_ASSOC);
 
-
                 for ($i=0; $i<count($resultarray);$i++){
 
                     $selec11=$pdo->prepare("SELECT id FROM tags where tag=:tagi");
@@ -236,7 +229,7 @@ switch ($action) {
         }
 
         if ((! isset($_SESSION["countmessage"]))or($_POST["countmessage"]!=2)){
-        $_SESSION["countmessage"]=$_POST["countmessage"]; //нудное колчество собщений на странице
+        $_SESSION["countmessage"]=$_POST["countmessage"]; //нужное колчество собщений на странице
         }
 
         $countstraniz= ceil($_SESSION['allmessage']/$_SESSION["countmessage"]);

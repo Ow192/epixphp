@@ -50,7 +50,9 @@ function exits($poststroka){   // $_POST["quit"]
     }
 }
 
-
+/**
+ * @return bool
+ */
 function tokencheck (){
     if (($_SESSION['token'])==($_POST['token'])){
         return true;
@@ -58,3 +60,20 @@ function tokencheck (){
         return false;
     }
 }
+
+/**
+ * @param array $config
+ * @return PDO
+ */
+function connect(array $config){
+    try{
+        return new PDO("mysql: host={$config['host']}; dbname={$config['dbname']}; charset=utf8",$config['user'],$config['password']);
+    } catch (Exception $e){
+        file_put_contents("log.txt", $e.date("j.n.Y H:i:s"),FILE_APPEND | LOCK_EX);
+        echo "<h1>Ошибка 503: Сервис временно не доступен.</h1>";
+        exit();
+    }
+}
+
+
+

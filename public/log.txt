@@ -10,4 +10,10 @@ Stack trace:
 #1 {main}0808,FriFriexception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'BD_LOGIN'@'localhost' (using password: YES)' in C:\xampp\htdocs\blokepix\block\public\index.php:15
 Stack trace:
 #0 C:\xampp\htdocs\blokepix\block\public\index.php(15): PDO->__construct('mysql: BD_HOST;...', 'BD_LOGIN', 'BD_PASSWORD')
-#1 {main}0808,FriFri
+#1 {main}0808,FriFriexception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Этот хост неизвестен. ' in C:\xampp\htdocs\blokepix\block\public\index.php:21
+Stack trace:
+#0 C:\xampp\htdocs\blokepix\block\public\index.php(21): PDO->__construct('mysql:host=BD_M...', 'root', '')
+#1 {main}2121,FriFriexception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'bd_main_name'' in C:\xampp\htdocs\blokepix\block\public\index.php:15
+Stack trace:
+#0 C:\xampp\htdocs\blokepix\block\public\index.php(15): PDO->__construct('mysql: host=BD_...', 'root', '')
+#1 {main}2121,FriFri

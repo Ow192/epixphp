@@ -1,7 +1,7 @@
 public - индекс + стили
 src - 
 temlates - верстка
-vendor - компосер
+vendor - компосер, не должно быть ничего лишнего
 
 composer.json
 

@@ -10,7 +10,6 @@ ob_start();
     require($namefile);
     $retur=ob_get_contents();
 ob_end_clean();
-
 return $retur;
 }
 
@@ -75,5 +74,8 @@ function connect(array $config){
     }
 }
 
+function __autoload($classname){
+    include '../classes/'.$classname.'.php';
+}
 
 

@@ -3,7 +3,6 @@ session_start();
 
 require '../config/config.php';
 require '../func.php';
-require '../vendor/autoloader.php';
 
 if (!isset($_POST['mesagewindow'])){$_POST['mesagewindow']="";}
 if (!isset($_POST['token'])){$_POST['token']="";}

@@ -76,7 +76,7 @@ switch ($action) {
                     header('Location:' . sprintf('%s?action=home', HomeUrl));
                 }
             else {
-                $erorlogin="Неправильный пароль.";
+                $erorlogin="Неправильный логин или пароль.";
             }
             }
 

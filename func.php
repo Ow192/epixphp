@@ -79,3 +79,35 @@ function __autoload($classname){
 }
 
 
+function BD_message ($connectBD,array $message,$results){
+
+    $selec=$connectBD->prepare($message['mess']);
+    $pleyscount=(count($message)-1)/2;
+    if ($pleyscount==2){
+        $selec->execute([
+        $message['pleys_1']=> $message['pleys_1_value'],
+        $message['pleys_2']=> $message['pleys_2_value'],
+    ]);}
+    if ($pleyscount==1){
+        $selec->execute([
+            $message['pleys_1']=> $message['pleys_1_value'],
+        ]);}
+    switch($results){
+        case 'one':
+            return $selec->fetch(PDO::FETCH_ASSOC);
+            break;
+        case 'all':
+            return $selec->fetchAll(PDO::FETCH_ASSOC);
+            break;
+        case 'none':
+            return null;
+            break;
+        default:
+            return $selec->fetchAll(PDO::FETCH_ASSOC);
+            break;
+    }
+}
+
+
+//all fetch none
+// 1 /2

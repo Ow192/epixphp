@@ -4,16 +4,16 @@ session_start();
 require '../config/config.php';
 require '../func.php';
 
-if (!isset($_POST['mesagewindow'])){$_POST['mesagewindow']="";}
-if (!isset($_POST['token'])){$_POST['token']="";}
-if (!isset($_SESSION['token'])){$_SESSION['token']="";}
-if (!isset($_POST['quit'])){$_POST['quit']=false;}
-if (!isset($_POST['style'])){$_POST['style']="";}
-
 $pdo=connect(['host'=>BD_MAIN_HOST,'dbname'=> BD_MAIN_NAME,'user'=>BD_MAIN_LOGIN,'password'=>BD_MAIN_PASSWORD]);
 
+if (!isset($_POST['mesagewindow'])){$post_mesagewindow="";} else {$post_mesagewindow=$_POST['mesagewindow'];}
+if (!isset($_POST['token'])){$post_token="";} else {$post_token=$_POST['token'];}
+if (!isset($_SESSION['token'])){$_SESSION['token']="";}
+if (!isset($_POST['quit'])){$post_quit=false;} else {$post_quit=$_POST['quit'];}
+if (!isset($_POST['style'])){$post_style="";} else {$post_style=$_POST['style'];}
+
 if (!isset($_COOKIE ['style'])){ $cookieinit="0"; setcookie("style", $cookieinit);} else {$cookieinit=(int)$_COOKIE['style'];}
-if (!empty($_POST['style'])){$cookieinit=(int)$_POST['style'];  setcookie("style",$cookieinit);}
+if (!empty($post_style)){$cookieinit=(int)$post_style;  setcookie("style",$cookieinit);}
 
 switch ($cookieinit){
         case 1:
@@ -32,46 +32,48 @@ $action= empty($_GET["action"]) ? "home" : $_GET["action"];
 }else{
     $action="login";
 }
+
+check_exit_button($post_quit);
+$tokenscheck=tokencheck($post_token);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 switch ($action) {
 
     case 'login':
-        if (!isset($_POST['login'])){$_POST['login']="";}
-        if (!isset($_POST['password'])){$_POST['password']="";}
-        if (!isset($_POST['action'])){$_POST['action']="";}
-        $erorlogin=" ";
-        $tokenscheck=tokencheck();
+        if (!isset($_POST['login'])){$post_login="";} else {$post_login=$_POST['login'];}
+        if (!isset($_POST['password'])){$post_password="";} else {$post_password=$_POST['password'];}
+        if (!isset($_POST['action'])){ $post_action="";} else {$post_action=$_POST['action'];}
 
-        if (($tokenscheck==true)&&(formcheck($_POST['action'])==false)&&(formcheck($_POST['login'])==false)&&
-            (formcheck($_POST['password'])==false)&&(formcheck($_POST['action'])==false)&&($_POST['action']=="Registration")){
+        $erorlogin=" ";
+
+        if (($tokenscheck==true)&&(formcheck($post_action)==false)&&(formcheck($post_login)==false)&&
+            (formcheck($post_password)==false)&&(formcheck($post_action)==false)&&($post_action=="Registration")){
         $selec12=$pdo->prepare("SELECT login FROM users where login=:logins");
         $selec12->execute([
-        'logins'=> $_POST['login'],
+        'logins'=> $post_login,
             ]);
          $logincheck=$selec12->fetch(PDO::FETCH_ASSOC);
         if (isset($logincheck["login"])){  $erorlogin="Такой логин уже используется"; }
             else{
         $selec5=$pdo->prepare("INSERT INTO users SET login=:lo, password=:pa");
         $selec5->execute([
-            ':lo'=>$_POST['login'],
-            ':pa'=>password_hash($_POST['password'], PASSWORD_DEFAULT),
+            ':lo'=>$post_login,
+            ':pa'=>password_hash($post_password, PASSWORD_DEFAULT),
         ]);}
         }
 
-        if (($tokenscheck==true)&&(formcheck($_POST['login'])==false)&&(formcheck($_POST['password'])==false) && ($_POST['action']=="Login"))
+        if (($tokenscheck==true)&&(formcheck($post_login)==false)&&(formcheck($post_password)==false) && ($post_action=="Login"))
         {
-            echo $erorlogin;
-            $_POST['login'] = htmlentities($_POST['login']);
-            $_POST['password'] = htmlentities($_POST['password']);
+            $post_login = htmlentities($post_login);
+            $post_password = htmlentities($post_password);
             $selec4 = $pdo->prepare("SELECT id, password FROM users WHERE login=:login");
             $selec4->execute([
-                ':login'=>$_POST['login'],
+                ':login'=>$post_login,
             ]);
             $userid=$selec4->fetchall(PDO::FETCH_ASSOC);
 
             if (!isset($userid["0"]["id"])){
-                $erorlogin="Неправильный логин или пароль";
-            } elseif (password_verify($_POST['password'],$userid["0"]["password"])){
+                $erorlogin="Неправильный логин или пароль.";
+            } elseif (password_verify($post_password,$userid["0"]["password"])){
                     $_SESSION["id"]=$userid["0"]["id"];
                     header('Location:' . sprintf('%s?action=home', HomeUrl));
                 }
@@ -90,9 +92,8 @@ switch ($action) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     case 'search':
-        exits($_POST["quit"]);
-        $tokenscheck=tokencheck();
-        $searching="";
+
+        $searching=[];
         $_POST["Searchtags"]=htmlentities($_POST["Searchtags"]);// имя тега
         if (($tokenscheck==true)&&(formcheck($_POST["Searchtags"])==false)){
             $selec7 = $pdo->prepare("SELECT mesage.mes, mesage.date, mesage.userid, tags.tag FROM mesage inner join tagmessageid
@@ -103,7 +104,6 @@ switch ($action) {
             ]);
             $searching=$selec7->fetchall(PDO::FETCH_ASSOC);
          }
-
         echo templates('templates/searchtag.php', [
             'style' => $style,
             'token' => newtoken(),
@@ -116,8 +116,8 @@ switch ($action) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     case 'profile':
-        exits($_POST["quit"]);
-        $tokenscheck=tokencheck();
+
+
 
         echo templates('templates/profile.php', [
             'style' => $style,
@@ -129,29 +129,29 @@ switch ($action) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     default:
 
-        exits($_POST["quit"]);
-        if (!isset($_POST['delete'])){$_POST['delete']="";}
-        if (!isset($_POST['countmessage'])){$_POST['countmessage']="2";}
-        if (!isset($_POST['page'])){$_POST['page']="1";}
-        if (!isset($_POST['mesageEdit'])){$_POST['mesageEdit']="";}
-        if (!isset($mesedit)){$mesedit="";}
-        $tokenscheck=tokencheck();
 
-        if (($tokenscheck==true)&&(formcheck($_POST['delete'])==false)&&($_POST['action']=="Edit")){
-            $mesedit=$_POST['delete'];
+        if (!isset($_POST['delete'])){ $post_delete="";} else {$post_delete=$_POST['delete'];}
+        if (!isset($_POST['countmessage'])){ $post_countmessage="2";} else {$post_countmessage=$_POST['countmessage'];}
+        if (!isset($_POST['page'])){ $post_page="1";} else {$post_page=$_POST['page'];}
+        if (!isset($_POST['mesageEdit'])){$post_mesageEdit="";} else {$post_mesageEdit=$_POST['mesageEdit'];}
+        if (!isset($mesedit)){$mesedit="";}
+
+
+        if (($tokenscheck==true)&&(formcheck($post_delete)==false)&&($post_action=="Edit")){
+            $mesedit=$post_delete;
             $_SESSION['editmessage']=$mesedit;
             }
 
-        if (($tokenscheck==true)&&(formcheck($_POST['delete'])==false)&&($_POST['action']=="Delete")){
+        if (($tokenscheck==true)&&(formcheck($post_delete)==false)&&($post_action=="Delete")){
                 $selec5=$pdo->prepare("DELETE FROM mesage WHERE id=:ids");
                 $selec5->execute([
-                    ':ids'=>$_POST['delete'],
+                    ':ids'=>$post_delete,
                 ]);
         }
 
-        if (($tokenscheck==true)&&(formcheck($_POST['mesagewindow'])==false))
+        if (($tokenscheck==true)&&(formcheck($post_mesagewindow)==false))
         {
-            $_POST['mesagewindow'] = htmlentities($_POST['mesagewindow']);
+            $post_mesagewindow = htmlentities($post_mesagewindow);
             $selec2 = $pdo->prepare("INSERT into mesage set date=now(), mes=:mess,userid=:uses");
             $selec2->execute([
                 ':mess'=>$_POST["mesagewindow"],
@@ -208,17 +208,17 @@ switch ($action) {
             }
         }
 
-        if (($tokenscheck==true)&&(formcheck($_POST['mesageEdit'])==false)&&($_POST["action"])=="Save")
+        if (($tokenscheck==true)&&(formcheck($post_mesageEdit)==false)&&($_POST["action"])=="Save")
         {
-            $_POST['mesageEdit'] = htmlentities($_POST['mesageEdit']);
+            $post_mesageEdit = htmlentities($post_mesageEdit);
             $selec2 = $pdo->prepare("UPDATE mesage SET mes=:mess Where id=:userid");
             $selec2->execute([
-                ':mess'=>$_POST['mesageEdit'],
+                ':mess'=>$post_mesageEdit,
                 ':userid'=>$_SESSION['editmessage']
             ]);
         }
 
-        if ((!isset($_SESSION['allmessage']))or (!empty($_POST['delete'])) or (!empty($_POST['mesagewindow']))){
+        if ((!isset($_SESSION['allmessage']))or (!empty($post_delete)) or (!empty($post_mesagewindow))){
             $selec6=$pdo->prepare("SELECT mesage.id FROM mesage where mesage.userid=:ids");
             $selec6->execute([
                 'ids'=>$_SESSION["id"],
@@ -227,12 +227,12 @@ switch ($action) {
             $_SESSION['allmessage']=count($mesages);
         }
 
-        if ((! isset($_SESSION["countmessage"]))or($_POST["countmessage"]!=2)){
-        $_SESSION["countmessage"]=$_POST["countmessage"]; //нужное колчество собщений на странице
+        if ((! isset($_SESSION["countmessage"]))or($post_countmessage!=2)){
+        $_SESSION["countmessage"]=$post_countmessage; //нужное колчество собщений на странице
         }
 
         $countstraniz= ceil($_SESSION['allmessage']/$_SESSION["countmessage"]);
-        $starts= (int)$_SESSION["countmessage"]*$_POST["page"]-$_SESSION["countmessage"];
+        $starts= (int)$_SESSION["countmessage"]*$post_page-$_SESSION["countmessage"];
         $kols=(int)$_SESSION["countmessage"];
 
         $selec3=$pdo->prepare("SELECT mesage.mes, mesage.userid, mesage.date, mesage.id FROM mesage where mesage.userid=:ids order by mesage.date DESC Limit $starts,$kols");

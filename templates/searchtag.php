@@ -15,6 +15,7 @@
 </form>
 <h1>Search tegs</h1>
 <h3>Результат по тегу: <?=$ishim ?></h3>
+
 <?php foreach ($searching as $key=>$value): ?>
     <div class="message">
         <div> <?=htmlspecialchars($searching[$key]["mes"]) ?></div>

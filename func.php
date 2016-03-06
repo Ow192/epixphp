@@ -42,7 +42,7 @@ function newtoken () {
 /**
  * @param $poststroka
  */
-function exits($poststroka){   // $_POST["quit"]
+function check_exit_button($poststroka){   // $_POST["quit"]
     if (($poststroka==true)&&($_SESSION['token']==$_POST['token'])&&(formcheck($poststroka)==false)){
         $_SESSION["id"]=null;
         header('Location:' . sprintf('%s?action=login', HomeUrl));
@@ -52,8 +52,8 @@ function exits($poststroka){   // $_POST["quit"]
 /**
  * @return bool
  */
-function tokencheck (){
-    if (($_SESSION['token'])==($_POST['token'])){
+function tokencheck ($post_tokens){
+    if (($_SESSION['token'])==$post_tokens){
         return true;
     } else {
         return false;

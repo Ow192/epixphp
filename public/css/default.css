@@ -1,0 +1,63 @@
+body{
+
+    margin: 100px auto;
+    background-image: radial-gradient(center,white 20%, gray 50%, white 70%);
+
+}
+
+header{
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+h1 {
+    border: 3px dashed blue;
+    border-radius: 20px ;
+    padding: 7px 20px;
+}
+fieldset.center{
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+span.submit{
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: rgb(255,255,255);
+    background-color: lawngreen;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 5px 20px;
+    margin-left: 10px;
+}
+div.submit{
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: rgb(255,255,255);
+    background-color: lawngreen;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 5px 20px;
+    margin-left: 10px;
+}
+input {
+    background-image: url(logo.png);
+    background-position: 5px 5px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+}
+
+.column1 {  width: 8.33%;   }
+.column2 {  width: 16.66%; }
+.column3 {  width: 25%;      }
+.column4 {  width: 33.33%; }
+.column5 {  width: 41.66%; }
+.column6 {  width: 50%;      }
+.column7 {  width: 58.33%; }
+.column8 {  width: 66.66%; }
+.column9 {  width: 75%;      }
+.column10 {  width: 83.11%; }
+.column11 {  width: 91.66%; }
+.column12 {  width: 100%;    }

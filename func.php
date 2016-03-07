@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @param $namefile
  * @param array $peredArgym
@@ -76,9 +77,15 @@ function connect(array $config){
 
 function __autoload($classname){
     include '../classes/'.$classname.'.php';
+
 }
 
-
+/**
+ * @param $connectBD
+ * @param array $message
+ * @param $results
+ * @return null
+ */
 function BD_message ($connectBD,array $message,$results){
 
     $selec=$connectBD->prepare($message['mess']);

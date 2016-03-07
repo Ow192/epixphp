@@ -1,11 +1,14 @@
 <?php
+
 session_start();
 
 require '../config/config.php';
 require '../func.php';
 
-$pdo=connect(['host'=>BD_MAIN_HOST,'dbname'=> BD_MAIN_NAME,'user'=>BD_MAIN_LOGIN,'password'=>BD_MAIN_PASSWORD]);
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
+$pdo=connect(['host'=>BD_MAIN_HOST,'dbname'=> BD_MAIN_NAME,'user'=>BD_MAIN_LOGIN,'password'=>BD_MAIN_PASSWORD]);
 
 if (!isset($_POST['token'])){$post_token="";} else {$post_token=$_POST['token'];}
 if (!isset($_SESSION['token'])){$_SESSION['token']="";}

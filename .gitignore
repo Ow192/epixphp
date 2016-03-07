@@ -1,6 +1,8 @@
 .idea/
-classes/
+src/
 logs/
+classes/
+public/index2.php
 test.php
 folders.txt
 README.txt

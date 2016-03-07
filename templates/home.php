@@ -6,7 +6,11 @@
     <link rel="stylesheet" href="css/<?= $style ?>.css">
 </head>
 <body>
+<nav>
 <a href="<?= $homeurl ?>?action=profile">profile</a>
+</nav>
+
+
 <form action ="<?= $homeurl?>" method="post">
     <input type="submit" name="action" value="Exit">
     <input type="hidden" name="quit" value="true">
@@ -35,6 +39,7 @@
 <?php endfor ?>
 </form>
 <h1>Home</h1>
+<main>
 
 <?php foreach ($mesage as $key=>$value): ?>
 <div class="message">
@@ -61,6 +66,8 @@
 <br>
     <?php endif ?>
 <?php endforeach ?>
+</main>
+
 
 <form action ="<?= $homeurl?>?action=home" method="post">
     <textarea name="mesagewindow" rows="5"></textarea>
